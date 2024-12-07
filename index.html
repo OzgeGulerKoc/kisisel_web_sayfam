@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sayfası</title>
+    <style>
+        :root {
+            --main-bg-color: #f7f7f7;
+            --main-text-color: #333;
+            --accent-color: #8ea69b;
+            --secondary-bg-color: #dce3dc;
+            --canvas-bg-color: #e8f0eb;
+            --canvas-border-color: #8ea69b;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--accent-color);
+            color: #fff;
+            padding: 3rem 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .baslik{
+            font-size: 3rem; 
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--main-text-color);
+        }
+
+        nav {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        main {
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: var(--canvas-bg-color);
+            border: 2px solid var(--canvas-border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-section, .experience-section, .personal-section, .hobbies-section, .contact-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .education-section img {
+            border-radius: 10px;
+            width: 180px;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .education-section .text, .experience-section .text, .personal-section .text, .hobbies-section .text, .contact-section .text {
+            flex: 1;
+        }
+
+        .contact-section a{
+            color: #333;
+        }
+
+        article {
+            background: var(--canvas-bg-color);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: var(--accent-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        a {
+            color: var(--main-text-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                position: static;
+                margin-top: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .education-section, .experience-section, .personal-section, .hobbies-section, .contact-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .education-section img {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="baslik">Özge Koç</h1>
+        <nav>
+            <ul>
+                <li><a href="#egitim">Eğitimim</a></li>
+                <li><a href="#isdeneyimi">İş Deneyimim</a></li>
+                <li><a href="#kisiselozellikler">Sertifikalar</a></li>
+                <li><a href="#hobiler">Referanslar</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="egitim">
+            <div class="education-section">
+                <div class="text">
+                    <h2>Eğitimim</h2>
+                    <p>
+                        Bilgisayar Programcılığı (Sinop Üniversitesi) <br>
+                        Yerel Yönetimler (Anadolu Üniversitesi)<br>
+                        Samsun 19 Mayıs Lisesi<br>
+                        (Sertifikalar) - Bilgisayar işletmenliği operatörlüğü<br>
+                    </p>
+                </div>
+                <img src="ozgekoc.png" alt="Profil Resmi">
+            </div>
+        </article>
+        <article id="isdeneyimi">
+            <div class="experience-section">
+                <div class="text">
+                    <h2>İş Deneyimim</h2>
+                    <p>Samsun Sezai Karakoç Canik Kültür Merkezi - Yönetici</p>
+                </div>
+            </div>
+        </article>
+        <article id="kisiselozellikler">
+            <div class="personal-section">
+                <div class="text">
+                    <h2>Kişisel Özelliklerim</h2>
+                    <p>
+                        Öğrenmeye açık <br>
+                        Ekip çalışmasına yatkın<br>
+                        İyi iletişim becerisine sahip<br>
+                        Mevcut projelere, yapılacak bir işe hızlıca adapte olmak<br>
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article id="hobiler">
+            <div class="hobbies-section">
+                <div class="text">
+                    <h2>Hobiler ve İlgi Alanları</h2>
+                    <ul>
+                        <li>Seyahat etmek</li>
+                        <li>İnsan psikolojisiyle ilgili detaylarla ilgilenmek</li>
+                        <li>Bisiklet sürmek</li>
+                        <li>Kahve kültürü</li>
+                        <li>Müzik dinlemek</li>
+                        <li>Ev dekorasyonu</li>
+                        <li>Takı tasarımı</li>
+                        <li>Yönetim ve organize etme</li>
+                        <li>İnsanlarla sevdiklerimle olmak</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article id="iletisim">
+            <div class="contact-section">
+                <div class="text">
+                    <h2>İletişim</h2>
+                    <p>
+                        <strong>Telefon: </strong> 05388389091 <br>
+                        <strong>E-posta: </strong> ozgegulerkoc@gmail.com<br>
+                        <strong>Adres: </strong> Canik / Samsun<br><br>
+                        <a href="#">LinkedIn</a> •  <a href="#">Facebook</a> • <a href="#">Twitter</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Özge Koç. Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
